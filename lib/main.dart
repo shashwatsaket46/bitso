@@ -1,5 +1,6 @@
 import 'package:bitso/screen/homepage.dart';
 import 'package:bitso/screen/loginpage.dart';
+import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 void main() {
@@ -22,8 +23,8 @@ class bitso extends StatelessWidget {
         brightness: Brightness.light,
       ),
       routes: {
-        "/":(context)=>loginpage(),
-        "/home":(context)=>homepage(),
+        MyRoutes.loginRoute:(context)=>loginpage(),
+        MyRoutes.homeRoute:(context)=>homepage(),
       }
     );
   }
