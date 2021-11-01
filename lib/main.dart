@@ -1,3 +1,4 @@
+import 'package:bitso/screen/alumni.dart';
 import 'package:bitso/screen/homepage.dart';
 import 'package:bitso/screen/loginpage.dart';
 import 'package:bitso/utils/routes.dart';
@@ -21,10 +22,15 @@ class bitso extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.orange[100],
       ),
       routes: {
+       // InitialRouteListFactory(context)=>"/",
         MyRoutes.loginRoute:(context)=>loginpage(),
         MyRoutes.homeRoute:(context)=>homepage(),
+   //     MyRoutes.homeRoute:(context)=>alumni(),
+        // MyRoutes.homeRoute:(context)=>(),
+        // MyRoutes.homeRoute:(context)=>homepage(),
       }
     );
   }

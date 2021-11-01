@@ -1,14 +1,16 @@
 import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
 
-class loginpage extends StatefulWidget {
-  const loginpage({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';
+
+class alumni extends StatefulWidget {
+  const alumni({Key? key}) : super(key: key);
 
   @override
-  State<loginpage> createState() => _loginpageState();
+  State<alumni> createState() => _alumniState();
 }
 
-class _loginpageState extends State<loginpage> {
+class _alumniState extends State<alumni> {
   String name = "";
   bool change = false;
   @override
@@ -19,49 +21,19 @@ class _loginpageState extends State<loginpage> {
           child: Column(
             children: [
               Image.asset("assets/img/login.png", fit: BoxFit.cover),
-              SizedBox(
-                height: 30,
-                width: 200,
-                child: Text("Birla Institute of Technology"),
-              ),
-              Text(
-                "Welcome $name",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 35, horizontal: 45),
                 child: Column(
                   children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Username",
-                        labelText: "Username",
-                      ),
-                      onChanged: (value) {
-                        name = value;
-                        setState(() {});
-                      },
-                    ),
-                    TextFormField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: "Enter Password",
-                          labelText: "Password",
-                        )),
-                    SizedBox(
-                      height: 30,
-                    ),
                     InkWell(
                       onTap: () async {
                         setState(() {
                           change = true;
                         });
                         await Future.delayed(Duration(seconds: 1));
-                        await Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        await Navigator.pushNamed(context, MyRoutes.loginRoute);
                         setState(() {
                           change=false;
                         });
