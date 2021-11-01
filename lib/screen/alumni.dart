@@ -15,8 +15,13 @@ class _alumniState extends State<alumni> {
   bool change = false;
   @override
   Widget build(BuildContext context) {
-    return Material(
-        color: Colors.white,
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Alumni Registration"),
+        ),
+        
+        body:Container(
+         color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -27,6 +32,48 @@ class _alumniState extends State<alumni> {
                     const EdgeInsets.symmetric(vertical: 35, horizontal: 45),
                 child: Column(
                   children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter your Name",
+                        labelText: "Alumni Name",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Year",
+                        labelText: "Passing Year",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    TextFormField(
+                      
+                      decoration: InputDecoration(
+                        hintText: "Enter Roll Number",
+                        labelText: "Roll Number",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter your Current Position",
+                        labelText: "Occupation",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    
                     InkWell(
                       onTap: () async {
                         setState(() {
@@ -46,7 +93,7 @@ class _alumniState extends State<alumni> {
                         child: change?Icon(Icons.done,color: Colors.white,)
                         //color: Colors.deepOrange,
                         : Text(
-                          "Login",
+                          "Submit",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -71,8 +118,10 @@ class _alumniState extends State<alumni> {
                   ],
                 ),
               )
+          
             ],
           ),
+        )
         ));
   }
 }

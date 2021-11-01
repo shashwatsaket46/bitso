@@ -28,6 +28,7 @@ class bitso extends StatelessWidget {
        // InitialRouteListFactory(context)=>"/",
         MyRoutes.loginRoute:(context)=>loginpage(),
         MyRoutes.homeRoute:(context)=>homepage(),
+        MyRoutes.alumniRoute:(context)=>alumni()
    //     MyRoutes.homeRoute:(context)=>alumni(),
         // MyRoutes.homeRoute:(context)=>(),
         // MyRoutes.homeRoute:(context)=>homepage(),

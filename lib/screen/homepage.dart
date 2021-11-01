@@ -1,3 +1,5 @@
+import 'package:bitso/screen/alumni.dart';
+import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,8 +54,8 @@ class homepage extends StatelessWidget {
                   ),
                   
                   child: Text('Alumni'),
-                  onPressed: () {
-                  print('Pressed');
+                  onPressed: () async {
+                  await Navigator.pushNamed(context, MyRoutes.alumniRoute);
                     },
                   ),
                 ), 
