@@ -1,12 +1,10 @@
 import 'package:bitso/screen/alumni.dart';
-import 'package:bitso/screen/alumni_man.dart';
-import 'package:bitso/screen/student_reg.dart';
 import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class homepage extends StatelessWidget {
-  const homepage({Key? key}) : super(key: key);
+class alumniman extends StatelessWidget {
+  const alumniman({Key? key}) : super(key: key);
   final int days = 30;
   final String s = "Ramu";
   @override
@@ -24,7 +22,7 @@ class homepage extends StatelessWidget {
                 SizedBox(
                   height: 100,
                   width: 200,
-                  child: Text("Birla Institute of Technology"),
+                  child: Text("Alumni Management Portal"),
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -45,7 +43,7 @@ class homepage extends StatelessWidget {
                           child: Text('Alumni'),
                           onPressed: () async {
                             await Navigator.pushNamed(
-                                context, MyRoutes.alumnimanRoute);
+                                context, MyRoutes.alumniRoute);
                           },
                         ),
                       ),
@@ -54,10 +52,9 @@ class homepage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.deepOrange),
                         child: ElevatedButton(
-                          child: Text('Club and Society'),
-                          onPressed: () async {
-                            await Navigator.pushNamed(
-                                context, MyRoutes.studentregRoute);
+                          child: Text('Management'),
+                          onPressed: () {
+                            print('Pressed');
                           },
                         ),
                       )
@@ -82,9 +79,10 @@ class homepage extends StatelessWidget {
                                 fontSize: 20,
                                 fontStyle: FontStyle.italic),
                           ),
-                          child: Text('Staff Quarter'),
+                          child: Text('Student'),
                           onPressed: () {
-                            print('Pressed');
+                            Navigator.pushNamed(
+                                context, MyRoutes.studentregRoute);
                           },
                         ),
                       ),
@@ -93,7 +91,7 @@ class homepage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.deepOrange),
                         child: ElevatedButton(
-                          child: Text('Planning Development'),
+                          child: Text('Faculty'),
                           onPressed: () {
                             print('Pressed');
                           },

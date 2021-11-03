@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "240554746583",
+    "project_id": "bitsosha",
+    "storage_bucket": "bitsosha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240554746583:android:08a9745ed9412c117f4692",
+        "android_client_info": {
+          "package_name": "com.shashwatsaket.bitso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240554746583-hm4v1arhgo6t6ioikhb7g668nusct3mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2ESrkjfd8TFdGRNq_fokP0vfAAhgf640"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240554746583-hm4v1arhgo6t6ioikhb7g668nusct3mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
