@@ -1,36 +1,34 @@
+import 'package:bitso/screen/alumni.dart';
 import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class loginpage extends StatefulWidget {
-  const loginpage({Key? key}) : super(key: key);
+
+class studentreg extends StatefulWidget {
+  const studentreg({Key? key}) : super(key: key);
 
   @override
-  State<loginpage> createState() => _loginpageState();
+  State<studentreg> createState() => _studentregState();
 }
 
-class _loginpageState extends State<loginpage> {
+// ignore: camel_case_types
+class _studentregState extends State<studentreg> {
   String name = "";
   bool change = false;
   @override
   Widget build(BuildContext context) {
-    return Material(
-        color: Colors.white,
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Faculty Registration"),
+        ),
+        
+        body:Container(
+         color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             children: [
               Image.asset("assets/img/login.png", fit: BoxFit.cover),
-              SizedBox(
-                height: 30,
-                width: 200,
-                child: Text("Birla Institute of Technology"),
-              ),
-              Text(
-                "Welcome $name",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 35, horizontal: 45),
@@ -38,8 +36,8 @@ class _loginpageState extends State<loginpage> {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Enter Username",
-                        labelText: "Username",
+                        hintText: "Enter your Name",
+                        labelText: "Student Name",
                       ),
                       onChanged: (value) {
                         name = value;
@@ -47,21 +45,54 @@ class _loginpageState extends State<loginpage> {
                       },
                     ),
                     TextFormField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: "Enter Password",
-                          labelText: "Password",
-                        )),
-                    SizedBox(
-                      height: 30,
+                      decoration: InputDecoration(
+                        hintText: "Enter Branch",
+                        labelText: "Branch",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
                     ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Branch",
+                        labelText: "Branch",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    TextFormField(
+                      
+                      decoration: InputDecoration(
+                        hintText: "Enter Roll Number",
+                        labelText: "Roll Number",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter your Current Position",
+                        labelText: "Occupation",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
+                    ),
+                    
                     InkWell(
                       onTap: () async {
                         setState(() {
                           change = true;
                         });
-                        await Future.delayed(Duration(seconds: 1));
-                        await Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        //await Future.delayed(Duration(seconds: 1));
+                        //await Navigator.pushNamed(context, MyRoutes.homeRoute);
                         setState(() {
                           change=false;
                         });
@@ -74,7 +105,7 @@ class _loginpageState extends State<loginpage> {
                         child: change?Icon(Icons.done,color: Colors.white,)
                         //color: Colors.deepOrange,
                         : Text(
-                          "Login",
+                          "Submit",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -99,8 +130,10 @@ class _loginpageState extends State<loginpage> {
                   ],
                 ),
               )
+          
             ],
           ),
+        )
         ));
   }
 }

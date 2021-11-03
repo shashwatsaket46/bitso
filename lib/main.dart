@@ -1,5 +1,8 @@
+import 'package:bitso/screen/alumni.dart';
+import 'package:bitso/screen/alumni_man.dart';
 import 'package:bitso/screen/homepage.dart';
 import 'package:bitso/screen/loginpage.dart';
+import 'package:bitso/screen/student_reg.dart';
 import 'package:bitso/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,10 +24,18 @@ class bitso extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.orange[100],
       ),
       routes: {
+       //   InitialRouteListFactory(context)=>"/",
         MyRoutes.loginRoute:(context)=>loginpage(),
         MyRoutes.homeRoute:(context)=>homepage(),
+        MyRoutes.alumniRoute:(context)=>alumni(),
+        MyRoutes.alumnimanRoute:(context)=>alumniman(),
+        MyRoutes.studentregRoute:(context)=>studentreg()
+        // MyRoutes.homeRoute:(context)=>alumni(),
+        // MyRoutes.homeRoute:(context)=>(),
+        // MyRoutes.homeRoute:(context)=>homepage(),
       }
     );
   }
